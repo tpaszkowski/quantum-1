@@ -140,7 +140,7 @@ class LinuxBridgeManager:
         """Create a vlan and bridge unless they already exist."""
         interface = self.ensure_vlan(physical_interface, vlan_id)
         bridge_name = self.get_bridge_name(network_id)
-        self.ensure_bridge(bridge_name, interface)
+        self.ensure_bridge(bridge_name, interface, ips, gateway):
         return interface
 
     def get_interface_details(self, interface):
